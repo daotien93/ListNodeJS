@@ -7,3 +7,6 @@ Middleware is use: app.use(level high), app.get
 app.get('/, check, (req, res, next) => {
     next() //sut down
 })
+
+// Body parser is 1 Middleware
+// use default first line
