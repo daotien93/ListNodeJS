@@ -1,0 +1,9 @@
+Middleware is windows
+Have 3 prammaters
+var check = (res, req, res) => {
+        req.params
+} 
+Middleware is use: app.use(level high), app.get
+app.get('/, check, (req, res, next) => {
+    next() //sut down
+})
