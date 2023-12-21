@@ -4,14 +4,10 @@ const port = 3000
 const bodyParser = require('body-parser')
 const AccountModel = require('./models/accounts')
 
-// parse various different custom JSON types as JSON
 app.use(bodyParser.json({ type: 'application/*+json' }))
-// parse some custom thing into a Buffer
 app.use(bodyParser.raw({ type: 'application/vnd.custom-type' }))
-// parse an HTML body into a string
 app.use(bodyParser.text({ type: 'text/html' }))
 
-//Router
 app.post('/register', (req, res, next) => {
     var username = req.body.username
     var password = req.body.password
@@ -37,7 +33,6 @@ app.post('/register', (req, res, next) => {
     }) 
 })
 
-//Login
 app.post('/login', (req, res, next) => {
     var username = req.body.username
     var password = req.body.password
